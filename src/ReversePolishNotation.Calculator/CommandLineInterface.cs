@@ -6,12 +6,12 @@ namespace ReversePolishNotation.Calculator
     public class CommandLineInterface
     {
         const string _welcomeString = "Welcome to Roon Labs Calculator, a basic" + " calculator using Reverse Polish notation.\nPress ? followed by enter" + " for help and a list of available operators.\n\n";
-        const string _promptString = "Input Statement: ";
-        const string _answerString = "   Answer: {0}\n\n";
+        const string _promptString = "Input: ";
+        const string _answerString = "Answer: {0}\n\n";
         const string _errorString = "Unexpected operator: {0}\n" + "Please press ? followed by enter for available operators.\n";
         const string _helpString = "Operands are placed before operators, such as 5 7 + to add 5 and 7.\n\n" +
             "Available operators:";
-
+        
         public double Begin()
         {
             Console.Write(_welcomeString);

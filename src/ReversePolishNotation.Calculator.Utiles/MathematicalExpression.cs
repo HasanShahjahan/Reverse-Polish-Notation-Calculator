@@ -13,15 +13,15 @@ namespace ReversePolishNotation.Calculator.Utiles
 
         public List<double> Operands { get; set; }
 
-        public char Operator { get; set; }
+        public string Operator { get; set; }
 
-        public MathematicalExpression(char op, IEnumerable<double> operands)
+        public MathematicalExpression(string op, IEnumerable<double> operands)
         {
             Operands = new List<double>(operands);
             Operator = op;
         }
 
-        public MathematicalExpression(char op, params double[] operands) : this(op, operands as IEnumerable<double>)
+        public MathematicalExpression(string op, params double[] operands) : this(op, operands as IEnumerable<double>)
         {
             
         }
@@ -45,7 +45,7 @@ namespace ReversePolishNotation.Calculator.Utiles
                 }
             }
 
-            return new MathematicalExpression(match.Groups.Values.Last().Value[0], operands);
+            return new MathematicalExpression(Convert.ToString(match.Groups.Values.Last().Value[0]), operands);
         }
 
         public static MathematicalExpression FromString(string input)
