@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ReversePolishNotation.Calculator.Common\ReversePolishNotation.Calculator.Common.csproj" />
     <ProjectReference Include="..\ReversePolishNotation.Calculator.Utiles\ReversePolishNotation.Calculator.Utiles.csproj" />
   </ItemGroup>
 
